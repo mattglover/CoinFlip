@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E260F7C3161F5C680098F795 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E260F7C2161F5C680098F795 /* UIKit.framework */; };
+		E260F7C5161F5C680098F795 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E260F7C4161F5C680098F795 /* Foundation.framework */; };
+		E260F7C7161F5C680098F795 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E260F7C6161F5C680098F795 /* CoreGraphics.framework */; };
+		E260F7CD161F5C680098F795 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E260F7CB161F5C680098F795 /* InfoPlist.strings */; };
+		E260F7CF161F5C680098F795 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E260F7CE161F5C680098F795 /* main.m */; };
+		E260F7D3161F5C680098F795 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E260F7D2161F5C680098F795 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E260F7BE161F5C680098F795 /* CoinFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E260F7C2161F5C680098F795 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E260F7C4161F5C680098F795 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E260F7C6161F5C680098F795 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E260F7CA161F5C680098F795 /* CoinFlip-Info.plist */ = {isa = PBXFileReference; path = "CoinFlip-Info.plist"; sourceTree = "<group>"; };
+		E260F7CC161F5C680098F795 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E260F7CE161F5C680098F795 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E260F7D0161F5C680098F795 /* CoinFlip-Prefix.pch */ = {isa = PBXFileReference; path = "CoinFlip-Prefix.pch"; sourceTree = "<group>"; };
+		E260F7D1161F5C680098F795 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E260F7D2161F5C680098F795 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E260F7BB161F5C680098F795 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E260F7C3161F5C680098F795 /* UIKit.framework in Frameworks */,
+				E260F7C5161F5C680098F795 /* Foundation.framework in Frameworks */,
+				E260F7C7161F5C680098F795 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E260F7B3161F5C680098F795 = {
+			isa = PBXGroup;
+			children = (
+				E260F7C8161F5C680098F795 /* CoinFlip */,
+				E260F7C1161F5C680098F795 /* Frameworks */,
+				E260F7BF161F5C680098F795 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E260F7BF161F5C680098F795 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E260F7BE161F5C680098F795 /* CoinFlip.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E260F7C1161F5C680098F795 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E260F7C2161F5C680098F795 /* UIKit.framework */,
+				E260F7C4161F5C680098F795 /* Foundation.framework */,
+				E260F7C6161F5C680098F795 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E260F7C8161F5C680098F795 /* CoinFlip */ = {
+			isa = PBXGroup;
+			children = (
+				E260F7D1161F5C680098F795 /* AppDelegate.h */,
+				E260F7D2161F5C680098F795 /* AppDelegate.m */,
+				E260F7C9161F5C680098F795 /* Supporting Files */,
+			);
+			path = CoinFlip;
+			sourceTree = "<group>";
+		};
+		E260F7C9161F5C680098F795 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E260F7CA161F5C680098F795 /* CoinFlip-Info.plist */,
+				E260F7CB161F5C680098F795 /* InfoPlist.strings */,
+				E260F7CE161F5C680098F795 /* main.m */,
+				E260F7D0161F5C680098F795 /* CoinFlip-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E260F7BD161F5C680098F795 /* CoinFlip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E260F7D6161F5C680098F795 /* Build configuration list for PBXNativeTarget "CoinFlip" */;
+			buildPhases = (
+				E260F7BA161F5C680098F795 /* Sources */,
+				E260F7BB161F5C680098F795 /* Frameworks */,
+				E260F7BC161F5C680098F795 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoinFlip;
+			productName = CoinFlip;
+			productReference = E260F7BE161F5C680098F795 /* CoinFlip.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E260F7B5161F5C680098F795 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Duchy Software Ltd";
+			};
+			buildConfigurationList = E260F7B8161F5C680098F795 /* Build configuration list for PBXProject "CoinFlip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E260F7B3161F5C680098F795;
+			productRefGroup = E260F7BF161F5C680098F795 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E260F7BD161F5C680098F795 /* CoinFlip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E260F7BC161F5C680098F795 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E260F7CD161F5C680098F795 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E260F7BA161F5C680098F795 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E260F7CF161F5C680098F795 /* main.m in Sources */,
+				E260F7D3161F5C680098F795 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E260F7CB161F5C680098F795 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E260F7CC161F5C680098F795 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E260F7D4161F5C680098F795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E260F7D5161F5C680098F795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E260F7D7161F5C680098F795 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoinFlip/CoinFlip-Prefix.pch";
+				INFOPLIST_FILE = "CoinFlip/CoinFlip-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E260F7D8161F5C680098F795 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoinFlip/CoinFlip-Prefix.pch";
+				INFOPLIST_FILE = "CoinFlip/CoinFlip-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E260F7B8161F5C680098F795 /* Build configuration list for PBXProject "CoinFlip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E260F7D4161F5C680098F795 /* Debug */,
+				E260F7D5161F5C680098F795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E260F7D6161F5C680098F795 /* Build configuration list for PBXNativeTarget "CoinFlip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E260F7D7161F5C680098F795 /* Debug */,
+				E260F7D8161F5C680098F795 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E260F7B5161F5C680098F795 /* Project object */;
+}
