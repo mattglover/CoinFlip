@@ -13,6 +13,10 @@
 		E260F7CD161F5C680098F795 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E260F7CB161F5C680098F795 /* InfoPlist.strings */; };
 		E260F7CF161F5C680098F795 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E260F7CE161F5C680098F795 /* main.m */; };
 		E260F7D3161F5C680098F795 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E260F7D2161F5C680098F795 /* AppDelegate.m */; };
+		E260F7DC161F5C830098F795 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E260F7DA161F5C830098F795 /* RootViewController.m */; };
+		E260F7DD161F5C830098F795 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E260F7DB161F5C830098F795 /* RootViewController.xib */; };
+		E260F7E0161F5D2A0098F795 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = E260F7DF161F5D2A0098F795 /* Coin.m */; };
+		E260F7E2161F5D830098F795 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E260F7E1161F5D830098F795 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,18 @@
 		E260F7C2161F5C680098F795 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E260F7C4161F5C680098F795 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E260F7C6161F5C680098F795 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E260F7CA161F5C680098F795 /* CoinFlip-Info.plist */ = {isa = PBXFileReference; path = "CoinFlip-Info.plist"; sourceTree = "<group>"; };
+		E260F7CA161F5C680098F795 /* CoinFlip-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoinFlip-Info.plist"; sourceTree = "<group>"; };
 		E260F7CC161F5C680098F795 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E260F7CE161F5C680098F795 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E260F7D0161F5C680098F795 /* CoinFlip-Prefix.pch */ = {isa = PBXFileReference; path = "CoinFlip-Prefix.pch"; sourceTree = "<group>"; };
-		E260F7D1161F5C680098F795 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E260F7D0161F5C680098F795 /* CoinFlip-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoinFlip-Prefix.pch"; sourceTree = "<group>"; };
+		E260F7D1161F5C680098F795 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E260F7D2161F5C680098F795 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E260F7D9161F5C830098F795 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E260F7DA161F5C830098F795 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E260F7DB161F5C830098F795 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		E260F7DE161F5D2A0098F795 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		E260F7DF161F5D2A0098F795 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
+		E260F7E1161F5D830098F795 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E260F7E2161F5D830098F795 /* QuartzCore.framework in Frameworks */,
 				E260F7C3161F5C680098F795 /* UIKit.framework in Frameworks */,
 				E260F7C5161F5C680098F795 /* Foundation.framework in Frameworks */,
 				E260F7C7161F5C680098F795 /* CoreGraphics.framework in Frameworks */,
@@ -45,6 +56,7 @@
 		E260F7B3161F5C680098F795 = {
 			isa = PBXGroup;
 			children = (
+				E260F7E1161F5D830098F795 /* QuartzCore.framework */,
 				E260F7C8161F5C680098F795 /* CoinFlip */,
 				E260F7C1161F5C680098F795 /* Frameworks */,
 				E260F7BF161F5C680098F795 /* Products */,
@@ -72,9 +84,12 @@
 		E260F7C8161F5C680098F795 /* CoinFlip */ = {
 			isa = PBXGroup;
 			children = (
-				E260F7D1161F5C680098F795 /* AppDelegate.h */,
-				E260F7D2161F5C680098F795 /* AppDelegate.m */,
 				E260F7C9161F5C680098F795 /* Supporting Files */,
+				E260F7D9161F5C830098F795 /* RootViewController.h */,
+				E260F7DA161F5C830098F795 /* RootViewController.m */,
+				E260F7DB161F5C830098F795 /* RootViewController.xib */,
+				E260F7DE161F5D2A0098F795 /* Coin.h */,
+				E260F7DF161F5D2A0098F795 /* Coin.m */,
 			);
 			path = CoinFlip;
 			sourceTree = "<group>";
@@ -82,6 +97,8 @@
 		E260F7C9161F5C680098F795 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E260F7D1161F5C680098F795 /* AppDelegate.h */,
+				E260F7D2161F5C680098F795 /* AppDelegate.m */,
 				E260F7CA161F5C680098F795 /* CoinFlip-Info.plist */,
 				E260F7CB161F5C680098F795 /* InfoPlist.strings */,
 				E260F7CE161F5C680098F795 /* main.m */,
@@ -142,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E260F7CD161F5C680098F795 /* InfoPlist.strings in Resources */,
+				E260F7DD161F5C830098F795 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +172,8 @@
 			files = (
 				E260F7CF161F5C680098F795 /* main.m in Sources */,
 				E260F7D3161F5C680098F795 /* AppDelegate.m in Sources */,
+				E260F7DC161F5C830098F795 /* RootViewController.m in Sources */,
+				E260F7E0161F5D2A0098F795 /* Coin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +275,7 @@
 				E260F7D8161F5C680098F795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

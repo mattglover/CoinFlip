@@ -7,13 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+
+@interface AppDelegate ()
+@property (nonatomic, retain) RootViewController *rootViewController;
+@end
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize rootViewController = _rootViewController;
 
 - (void)dealloc
 {
+    [_rootViewController release];
     [_window release];
     [super dealloc];
 }
@@ -23,6 +30,11 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.rootViewController = [[[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil] autorelease];
+    
+    [self.window setRootViewController:self.rootViewController];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
