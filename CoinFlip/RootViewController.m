@@ -57,8 +57,8 @@
 }
 - (IBAction)sliderValueChanged:(id)sender {
     
-//    CGFloat xAngle = (([self.slider value] - 0.5) * 100.0f) * 3.6;
-      CGFloat xAngle = (([self.slider value] - 0.5) * 100.0f) * 1.8;
+    CGFloat xAngle = (([self.slider value] - 0.5) * 100.0f) * 3.6;
+//      CGFloat xAngle = (([self.slider value] - 0.5) * 100.0f) * 1.8;
     
     [(Coin *)[self.view viewWithTag:1] flipCoinByAngle:xAngle];
 }

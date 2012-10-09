@@ -57,16 +57,22 @@
 
 - (void)setup {
     
+    CGFloat coinBorderWidth = 2.0;
+    /*
     CALayer *coinLayer = [CALayer layer];
     [coinLayer setBounds:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [coinLayer setCornerRadius:self.frame.size.width/2];
-    [coinLayer setBackgroundColor:[UIColor lightGrayColor].CGColor];
     [coinLayer setPosition:self.center];
-    [coinLayer setBorderColor:[UIColor darkGrayColor].CGColor];
-    [coinLayer setBorderWidth:2.0f];
     [coinLayer setDoubleSided:YES];
     [coinLayer setMasksToBounds:YES];
     [coinLayer setName:@"coin"];
+    */
+    
+    CATransformLayer *coinLayer = [CATransformLayer layer];
+    [coinLayer setBounds:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [coinLayer setPosition:self.center];
+    [coinLayer setName:@"coin"];
+    
     
     CAGradientLayer *gradientOverlay = [CAGradientLayer layer];
     [gradientOverlay setBounds:CGRectMake(0, 0, self.frame.size.width * 2, self.frame.size.height * 2)];
@@ -74,21 +80,61 @@
     [gradientOverlay setPosition:CGPointMake(coinLayer.position.x, -coinLayer.position.y)];
     [gradientOverlay setColors:[NSArray arrayWithObjects: (id)[UIColor whiteColor].CGColor, (id)[UIColor clearColor].CGColor, nil]];
     
-    CATextLayer *textLayer = [CATextLayer layer];
-    [textLayer setBounds:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width * .6)];
-    [textLayer setString:@"I"];
-    [textLayer setAlignmentMode:@"center"];
-    [textLayer setFont:[UIFont boldSystemFontOfSize:18].fontName];
-    [textLayer setFontSize:self.bounds.size.width * .70];
-    [textLayer setPosition:coinLayer.position];
-    [textLayer setForegroundColor:[UIColor whiteColor].CGColor];
-    [textLayer setShadowColor:[UIColor blackColor].CGColor];
-    [textLayer setShadowOffset:CGSizeMake(0.0f, -1.0f)];
-    [textLayer setShadowOpacity:0.7];
-    [textLayer setShadowRadius:1.0];
+    CALayer *frontLayer = [CALayer layer];
+    [frontLayer setBounds:coinLayer.bounds];
+    [frontLayer setCornerRadius:self.frame.size.width/2];
+    [frontLayer setBackgroundColor:[UIColor lightGrayColor].CGColor];
+    [frontLayer setPosition:self.center];
+    [frontLayer setBorderColor:[UIColor darkGrayColor].CGColor];
+    [frontLayer setBorderWidth:coinBorderWidth];
+    [frontLayer setDoubleSided:NO];
+    [frontLayer setMasksToBounds:YES];
     
-    [coinLayer addSublayer:textLayer];
-    [coinLayer addSublayer:gradientOverlay];
+    CATextLayer *frontTextLayer = [CATextLayer layer];
+    [frontTextLayer setBounds:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width * .6)];
+    [frontTextLayer setString:@"F"];
+    [frontTextLayer setAlignmentMode:@"center"];
+    [frontTextLayer setFont:[UIFont boldSystemFontOfSize:18].fontName];
+    [frontTextLayer setFontSize:self.bounds.size.width * .70];
+    [frontTextLayer setPosition:coinLayer.position];
+    [frontTextLayer setForegroundColor:[UIColor whiteColor].CGColor];
+    [frontTextLayer setShadowColor:[UIColor blackColor].CGColor];
+    [frontTextLayer setShadowOffset:CGSizeMake(0.0f, -1.0f)];
+    [frontTextLayer setShadowOpacity:0.7];
+    [frontTextLayer setShadowRadius:1.0];
+    
+    CALayer *backLayer = [CALayer layer];
+    [backLayer setBounds:coinLayer.bounds];
+    [backLayer setCornerRadius:self.frame.size.width/2];
+    [backLayer setBackgroundColor:[UIColor greenColor].CGColor];
+    [backLayer setPosition:self.center];
+    [backLayer setBorderColor:[UIColor darkGrayColor].CGColor];
+    [backLayer setBorderWidth:coinBorderWidth];
+    [backLayer setDoubleSided:NO];
+    [backLayer setMasksToBounds:YES];
+    
+    CATextLayer *backTextLayer = [CATextLayer layer];
+    [backTextLayer setBounds:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width * .6)];
+    [backTextLayer setString:@"B"];
+    [backTextLayer setAlignmentMode:@"center"];
+    [backTextLayer setFont:[UIFont boldSystemFontOfSize:18].fontName];
+    [backTextLayer setFontSize:self.bounds.size.width * .70];
+    [backTextLayer setPosition:coinLayer.position];
+    [backTextLayer setForegroundColor:[UIColor whiteColor].CGColor];
+    [backTextLayer setShadowColor:[UIColor blackColor].CGColor];
+    [backTextLayer setShadowOffset:CGSizeMake(0.0f, -1.0f)];
+    [backTextLayer setShadowOpacity:0.7];
+    [backTextLayer setShadowRadius:1.0];
+    
+    
+    [frontLayer addSublayer:frontTextLayer];
+    [frontLayer addSublayer:gradientOverlay];
+    
+    [backLayer addSublayer:backTextLayer];
+    [backLayer addSublayer:gradientOverlay];
+    
+    [coinLayer addSublayer:backLayer];
+    [coinLayer addSublayer:frontLayer];
     
     [self.layer addSublayer:coinLayer];
     
@@ -99,10 +145,9 @@
     CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
     [animationGroup setAnimations:[NSArray arrayWithObjects: [self riseAndFallAnimation], [self coinFlipAnimation], [self fadeOutAnimation], nil]];
     [animationGroup setDuration:4.5];
-    [[self.layer.sublayers objectAtIndex:0] addAnimation:animationGroup forKey:nil];
     
-   // [(CALayer *)[self.layer.sublayers objectAtIndex:0] addAnimation:[self coinFlipAnimation] forKey:nil];
-    
+    CALayer *coinLayer = [self.layer.sublayers objectAtIndex:0];
+    [coinLayer addAnimation:animationGroup forKey:nil];
 }
 
 - (CAAnimation *)coinFlipAnimation {
@@ -142,7 +187,7 @@
     
     CABasicAnimation *opacityAnim = [CABasicAnimation animationWithKeyPath:@"opacity"];
     [opacityAnim setFromValue:[NSNumber numberWithFloat:1.0]];
-    [opacityAnim setToValue:[NSNumber numberWithFloat:0.8]];
+    [opacityAnim setToValue:[NSNumber numberWithFloat:1.0]];
     
     [opacityAnim setDuration:1.5];
     [opacityAnim setAutoreverses:YES];
@@ -164,14 +209,5 @@
     [self.layer setTransform:transform];
     
 }
-
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
 
 @end
